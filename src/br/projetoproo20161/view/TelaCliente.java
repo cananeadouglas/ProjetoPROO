@@ -13,16 +13,21 @@ public class TelaCliente {
         do {
             opc = JOptionPane.showInputDialog("O que gostaria de fazer?\n"
                     + "1 - Verificar os Ingressos dos jogos disponíveis\n"
-                    + "2 - Comprar outros produtos exclusivos para sócios\n\n"
-                    + "3 - Sair deste menu e voltar para o principal ?");
+                    + "2 - Comprar Ingresso\n"
+                    + "3 - Comprar outros produtos exclusivos para sócios\n\n"
+                    + "4 - Sair deste menu e voltar para o principal ?");
 
             if (opc.equals("1")) {
 
                 ControlerClienteSocio cs = new ControlerClienteSocio();
                 cs.mostrandoPartidas();
             }
+             if (opc.equals("2")) {
+                 ControlerClienteSocio cs = new ControlerClienteSocio();
+                 cs.comprarIngresso();
+                }
 
-        } while (!opc.equals("0"));
+        } while (!opc.equals("4"));
 
     }
 
