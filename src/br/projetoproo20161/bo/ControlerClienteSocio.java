@@ -76,7 +76,7 @@ public class ControlerClienteSocio extends Cliente_socio {
           pstmt = con.prepareStatement("SELECT idjogos,valorjogo FROM partidas WHERE idjogos ='"+opc+"'");
           ResultSet result = pstmt.executeQuery();
            while (result.next()){
-          vetor2 += ""+result.getString("valorjogo")+""+result.getString("idjogos");
+          vetor2 += ""+result.getDouble("valorjogo")+""+result.getInt("idjogos");
            id = result.getString("idjogos");
            
            if (vetor.length() > 1){
