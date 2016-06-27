@@ -5,7 +5,7 @@ import br.projetoproo20161.modelo.Funcionario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.SQLException; 
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
