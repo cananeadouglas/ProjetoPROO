@@ -62,7 +62,9 @@ public abstract class Cliente {
 		this.sexo = sexo;
 	}
 	
-	
+	public void comprarIngresso() throws Exception {
+            
+        }
 
 	
 	

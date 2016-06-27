@@ -16,6 +16,8 @@ public class TelaPrincipal {
     public TelaPrincipal() throws SQLException, ClassNotFoundException {
 
         Cadastro cadastro = new Cadastro();
+        TelaClienteNaoSocio t = new TelaClienteNaoSocio();
+
         Logando login = new Logando();
         Date data = new Date(System.currentTimeMillis());
         SimpleDateFormat formatarDate = new SimpleDateFormat("dd-MM-yyyy");
@@ -24,7 +26,7 @@ public class TelaPrincipal {
         do {
             opc = JOptionPane.showInputDialog("Data Atual " + formatarDate.format(data) + "\n"
                     + "Bem Vindo  escolha a opção que deseja fazer\n"
-                    + "1 - Gostaria de me cadastrar e virar sócio\n"
+                    + "1 - Gostaria de me cadastrar e virar sócio e ter 15% de desconto\n"
                     + "2 - Para logar\n"
                     + "3 - Não tenho cadastro e não desejo me cadastrar só desejo comprar\n\n"
                     + "0 - Para sair");
@@ -36,7 +38,7 @@ public class TelaPrincipal {
                 login.Logando();
 
             } else if (opc.equals("3")) {
-                TelaClienteNaoSocio t = new TelaClienteNaoSocio();
+
                 t.telaClienteNaoSocio();
 
             } else if (opc.equals("0")) {

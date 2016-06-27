@@ -4,6 +4,10 @@ import br.projetoproo20161.bo.ControlerClienteSocio;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
+import br.projetoproo20161.bo.ControlerClienteSocio;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 public class TelaCliente {
 
     public void TelaPrincipalCliente() throws ClassNotFoundException, SQLException {
@@ -13,9 +17,8 @@ public class TelaCliente {
         do {
             opc = JOptionPane.showInputDialog("O que gostaria de fazer?\n"
                     + "1 - Verificar os Ingressos dos jogos disponíveis\n"
-                    + "2 - Comprar Ingresso\n"
-                    + "3 - Comprar outros produtos exclusivos para sócios\n\n"
-                    + "4 - Sair deste menu e voltar para o principal ?");
+                    + "2 - Comprar ingressos com ou sem caravana COM DESCONTO PARA SÓCIOS\n\n"
+                    + "0 - Sair deste menu e voltar para o principal ?");
 
             if (opc.equals("1")) {
 
@@ -27,8 +30,8 @@ public class TelaCliente {
                  cs.comprarIngresso();
                 }
 
-        } while (!opc.equals("4"));
+        } while (!opc.equals("0"));
 
     }
-
+    
 }
